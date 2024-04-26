@@ -321,3 +321,18 @@ var prime = (arr)=>{
 
 console.log(prime([1,2,3,4,5,17,20,131]));
 console.log(prime([4,6,8,10,15]));
+
+// 5.Return all the palindromes in an array
+var palindrome = (arr)=>{
+    var tmp = [];
+    for (var i=0; i<arr.length; i++){
+        var rev = arr[i].toString().split('').reverse().join('');
+        //console.log(arr[i] + "," + rev);
+        if(arr[i] == rev){
+            tmp.push(arr[i]);
+        }
+    }
+    return tmp;
+}
+console.log(palindrome([123,456,22022022,"aba"]));
+console.log(palindrome(["cfc",4554,2506,"bddb"]));
